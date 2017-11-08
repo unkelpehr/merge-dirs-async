@@ -1,0 +1,32 @@
+{
+  "name": "merge-dirs-async",
+  "description": "await merge( targetDir [, sourceDir1 ] [, sourceDirN ] [, options ] )",
+  "version": "v0.0.1",
+  "author": "Pehr Boman <unkelpehr@gmail.com>",
+  "homepage": "https://github.com/unkelpehr/merge-dirs-async",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unkelpehr/merge-dirs-async.git"
+  },
+  "dependencies": {
+    "debug": "^3.1.0",
+    "fs-extra": "^4.0.2",
+    "is-path-inside": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.22.0"
+  },
+  "scripts": {
+    "test": "ava",
+    "test:watch": "ava --watch",
+    "test:watch:verbose": "ava --watch --verbose"
+  },
+  "ava": {
+    "failFast": true,
+    "files": [
+      "tests/*/*.js"
+    ]
+  },
+  "keywords": []
+}
