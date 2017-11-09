@@ -27,7 +27,7 @@ fn.createFSFromObject = async (outputDir, structure) => {
 	}());
 };
 
-fn.createObjectFromFS = async (dir) => {
+fn.mapDir = async (dir) => {
 	const result = {};
 
 	await (async function walk (dir, obj) {

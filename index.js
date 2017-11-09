@@ -1,8 +1,6 @@
 'use strict';
 
 const path = require('path');
-const debug = require('debug')('merge-dirs-async');
-
 const FileStructure = require('./lib/FileStructure');
 
 async function main (outputDir, ...inputDirs) {
@@ -32,12 +30,8 @@ async function main (outputDir, ...inputDirs) {
 
 	outputDir = resolve(outputDir);
 	inputDirs = inputDirs.map(resolve);
-
+	
 	const fileStructure = new FileStructure(outputDir, inputDirs, options);
-
-	if (options.verbose) {
-		debug.enabled = true;
-	}
 
 	if (!options.delayMerge) {
 		await fileStructure.merge();

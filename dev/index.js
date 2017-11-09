@@ -6,7 +6,16 @@ const fs = require('fs-extra');
 const delay = async (ms) => new Promise(resolve => setTimeout(resolve, ms));
 const merge = require('../index');
 
+(async function () {
+	console.time('merge');
+	const files = await merge('./target', './source1', './source2', {
+		truncateTarget: true,
+		verbose: true
+	});
+	console.timeEnd('merge');
+}());
 
+/*
 const nsfw = require('nsfw');
 
 nsfw(path.join(__dirname, 'source1'), events => {
@@ -70,3 +79,4 @@ return;
 	// process.exit();
 	//debug(res);
 }())
+*/
